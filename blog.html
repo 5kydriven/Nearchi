@@ -7,17 +7,20 @@
     <title>Blog post</title>
 </head>
 <body>
+  <div class="btns">
+    <button><a href="index.html">Back</a></button>
     <button id="myBtn">Create</button>
+  </div>
 
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <input type="text" placeholder="Title">
-          <input type="text" placeholder="content">
+          <input type="text" placeholder="Title" class="modal-title">
+          <textarea   class="modal_content" placeholder="Write your content here"></textarea>
           <div class="modal-btn">
-            <button>Cancel</button>
-            <button>ok</button>
+            <button class="close-btn">Cancel</button>
+            <button>Upload</button>
           </div>
         </div>
       
@@ -30,7 +33,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.querySelector(".close-btn");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
